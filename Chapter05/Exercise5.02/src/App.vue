@@ -9,9 +9,10 @@
   </div>
 </template>
 <script>
+import Vue from 'vue'
 export default {
   async mounted() {
-    const { data: todos } = await this.axios('https://jsonplaceholder.typicode.com/todos')
+    const { data: todos } = await Vue.axios('https://jsonplaceholder.typicode.com/todos')
     this.todos = todos
   },
   data() {
