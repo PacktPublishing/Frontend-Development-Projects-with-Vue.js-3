@@ -1,0 +1,22 @@
+[
+  {
+    "type": "nonfiction",
+    "title": "Truth about Cats",
+    "pages": 200
+  },
+  {
+    "type": "nonfiction",
+    "title": "Truth about Dogs",
+    "pages": 100
+  },
+  {
+    "type": "fiction",
+    "title": "The Cat Said Meow",
+    "pages": 400
+  },
+  {
+    "type": "fiction",
+    "title": "The Last Dog",
+    "pages": 600
+  }
+]

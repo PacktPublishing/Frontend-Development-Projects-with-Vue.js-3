@@ -1,0 +1,17 @@
+{
+  "name": "Chapter13",
+  "private": true,
+  "workspaces": [
+    "Example13.01",
+    "Example13.02",
+    "Example13.03",
+    "Example13.04",
+    "Exercise13.01",
+    "Exercise13.02",
+    "Exercise13.03",
+    "Exercise13.04",
+    "Activity13.01"
+  ],
+  "dependencies": {},
+  "scripts": {}
+}

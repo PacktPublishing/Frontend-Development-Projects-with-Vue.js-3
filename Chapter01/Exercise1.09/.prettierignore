@@ -1,0 +1,5 @@
+/node_modules/**
+/dist/**
+/tests/unit/coverage/**
+/storybook-static/**
+CHANGELOG.md

@@ -1,0 +1,28 @@
+{
+    "name": "chapter06",
+    "private": true,
+    "workspaces": [
+      "example6.01",
+      "example6.02",
+      "example6.03",
+      "example6.04",
+      "example6.05",
+      "example6.06",
+      "example6.07",
+      "example6.08",
+      "example6.09",
+      "example6.10",
+      "example6.11",
+      "example6.12",
+      "exercise6.01",
+      "exercise6.02",
+      "exercise6.03",
+      "exercise6.04",
+      "exercise6.05",
+      "exercise6.06",
+      "activity6.01"
+    ],
+    "dependencies": {},
+    "scripts": {}
+  }
+  

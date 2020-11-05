@@ -1,0 +1,15 @@
+{
+  "name": "Chapter07",
+  "private": true,
+  "workspaces": [
+    "example7.01",
+    "example7.02",
+    "example7.03",
+    "example7.04",
+    "activity7.01"
+  ],
+  "dependencies": {
+    "gsap": "^3.0.1"
+  },
+  "scripts": {}
+}

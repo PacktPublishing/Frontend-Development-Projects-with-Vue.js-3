@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should match expected HTML 1`] = `
+<form class="flex flex-row m-auto mb-10"><input placeholder="Search" type="text" class="bg-white focus:outline-none focus:shadow-outline border
+    border-gray-300 rounded py-2 px-4 flex
+    appearance-none leading-normal"> <button type="submit" class="flex bg-blue-500 hover:bg-blue-700
+    text-white font-semibold font-sm hover:text-white py-2 px-4 border
+    border-blue-500 hover:border-transparent rounded">
+    Search
+  </button></form>
+`;

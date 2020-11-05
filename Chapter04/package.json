@@ -1,0 +1,25 @@
+{
+  "name": "Chapter04",
+  "private": true,
+  "workspaces": [
+    "Example4.01",
+    "Example4.02",
+    "Example4.03",
+    "Example4.04",
+    "Example4.05",
+    "Example4.06",
+    "Example4.07",
+    "Example4.08",
+    "Example4.09",
+    "Example4.10",
+    "Exercise4.01",
+    "Exercise4.02",
+    "Exercise4.03",
+    "Exercise4.04",
+    "Exercise4.05",
+    "Exercise4.06",
+    "Activity4.01"
+  ],
+  "dependencies": {},
+  "scripts": {}
+}

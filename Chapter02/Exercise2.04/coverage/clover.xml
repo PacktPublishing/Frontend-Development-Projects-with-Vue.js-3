@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1599956616390" clover="3.2.0">
+  <project timestamp="1599956616390" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="9" coveredelements="9" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="Exercise2-04.vue" path="/Users/cliffordgurney/GitHub/The-Vue-Workshop/Chapter02/Exercise2.04/src/components/Exercise2-04.vue">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="28" count="27" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="25" type="stmt"/>
+      <line num="34" count="25" type="stmt"/>
+    </file>
+  </project>
+</coverage>

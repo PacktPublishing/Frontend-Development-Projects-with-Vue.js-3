@@ -1,0 +1,41 @@
+build:
+  image: node:lts
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - dist
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+
+test:
+  image: node:lts
+  stage: test
+  script:
+    - npm ci
+    - npm run test:unit
+
+lint:
+  image: node:lts
+  stage: test
+  script:
+    - npm ci
+    - npm run lint
+
+deploy:
+  image: python:latest
+  stage: deploy
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - dist
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 sync ./dist s3://vue-workshop --acl=public-read
+

@@ -1,0 +1,184 @@
+button {
+  appearance: none;
+  padding: 10px;
+
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background: #2c3e50;
+  color: white;
+
+  +button {
+    margin-left: 10px;
+  }
+}
+
+small {
+  font-size: 10px;
+  padding-left: 12px;
+  color: #4b4b4b;
+}
+
+.controls {
+  display: flex;
+  padding: 4px;
+  background: #2c3e50;
+  justify-content: center;
+
+  button {
+    appearance: none;
+    padding: 10px;
+    border: 1px solid white;
+    background: transparent;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+
+    +button {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Type
+.h2 {
+  font-size: 21px;
+}
+
+// CV
+.cv {
+  display: flex;
+  max-width: 900px;
+  font-size: 14px;
+}
+
+.left {
+  padding-right: 80px;
+  min-width: 30%;
+
+  .name {
+    display: block;
+    position: relative;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+    line-height: 1;
+    color: #333;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 2px;
+      background: #333;
+    }
+  }
+
+  .title {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.right {
+  margin-top: 30px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+
+  >li {
+    list-style: none;
+
+    +li {
+      margin-top: 20px;
+    }
+  }
+
+  .highlights {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.skills {
+  max-width: 200px;
+  margin: 40px auto 0;
+}
+
+.skill {
+  border-radius: 20px;
+  border: 1px solid #2c3e50;
+  color: #2c3e50;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+// Form elements
+
+.form {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-evenly;
+  padding: 40px 20px;
+
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #ececec;
+}
+
+.formGroup {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: column;
+  margin: 0 auto;
+
+  label {
+    display: block;
+    margin: 10px 0;
+
+    input,
+    textarea {
+      display: block;
+      width: calc(100% - 20px);
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #cfcfcf;
+    }
+  }
+}
+
+.fieldset {
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 20px;
+
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #cfcfcf;
+  padding: 4px 10px;
+
+  +.preview {
+    border-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
