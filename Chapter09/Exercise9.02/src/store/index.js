@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   getters: {
     name(state) {
-      return `${state.firstName} ${state.lastName}`;
+      return '${state.firstName} ${state.lastName}';
     }
   },
   mutations: {
