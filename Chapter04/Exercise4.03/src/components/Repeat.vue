@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     repetitions() {
-      return Array.from({ length: this.config.times });
+      return Array.from({ length: this.config.times })
     }
   }
 }
