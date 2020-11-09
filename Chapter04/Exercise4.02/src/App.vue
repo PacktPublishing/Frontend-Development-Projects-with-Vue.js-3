@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Greeting :greeting="greeting" :who="who"/>
-    <button @click="newGreeting()">New Greeting</button> 
+    <button @click="newGreeting()">New Greeting</button>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ const possibleGreetings = [
     { greeting: 'Hello', who: 'Vue.js' },
     { greeting: 'Hey', who: 'Everyone' },
     { greeting: 'Hi', who: 'JavaScript' }
-  ]
+]
 
 export default {
   components: {
