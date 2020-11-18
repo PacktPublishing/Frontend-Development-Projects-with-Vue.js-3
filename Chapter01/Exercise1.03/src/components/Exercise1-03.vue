@@ -16,7 +16,7 @@ export default {
     return {
       title: 'My list component!',
       subtitle: 'Vue JS basics',
-      items: ['Item 1', 'Item 2', 'Item 3'],
+      items: ['Item 1', 'Item 2', 'Item 3']
     }
   },
 }
