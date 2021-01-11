@@ -40,7 +40,7 @@ export default {
       this.$refs.input.focus()
     },
     deleteItem(i) {
-      this.shoppingList = i
+      this.shoppingList = i != undefined 
         ? this.shoppingList.filter((item, x) => x !== i)
         : []
     },
