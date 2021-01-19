@@ -1,7 +1,7 @@
 # Front-End Development Projects with Vue.js
-[![GitHub issues](https://img.shields.io/github/issues/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktWorkshops/Front-End-Development-Projects-with-Vue.js/issues)
-[![GitHub forks](https://img.shields.io/github/forks/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktWorkshops/Front-End-Development-Projects-with-Vue.js/network)
-[![GitHub stars](https://img.shields.io/github/stars/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktWorkshops/Front-End-Development-Projects-with-Vue.js/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/issues)
+[![GitHub forks](https://img.shields.io/github/forks/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/network)
+[![GitHub stars](https://img.shields.io/github/stars/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/stargazers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktWorkshops/Front-End-Development-Projects-with-Vue.js/pulls)
 [![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)](https://www.python.org/downloads/)
 
