@@ -1,14 +1,14 @@
 # Front-End Development Projects with Vue.js
-[![GitHub issues](https://img.shields.io/github/issues/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/issues)
-[![GitHub forks](https://img.shields.io/github/forks/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/network)
-[![GitHub stars](https://img.shields.io/github/stars/PacktWorkshops/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/stargazers)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktWorkshops/Front-End-Development-Projects-with-Vue.js/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/issues)
+[![GitHub forks](https://img.shields.io/github/forks/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/network)
+[![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/pulls)
 [![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)](https://www.python.org/downloads/)
 
 This is the repository for [Front-End Development Projects with Vue.js](https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
-<a href="https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js"><img src="" alt="Front-End Development Projects with Vue.js" height="290px" width="230px" align="right" this.target="_blank"></a>
+<a href="https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js"><img src="https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/blob/master/Front-end%20Development%20Projects%20with%20Vue.js.png" alt="Front-End Development Projects with Vue.js" height="290px" width="230px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
 
