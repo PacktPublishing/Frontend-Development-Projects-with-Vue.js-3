@@ -11,6 +11,11 @@ This is the repository for [Front-End Development Projects with Vue.js](https://
 <a href="https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js"><img src="https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/blob/master/Front-end%20Development%20Projects%20with%20Vue.js.png" alt="Front-End Development Projects with Vue.js" height="290px" width="230px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
+* Install [Node.js](https://nodejs.org/en/download/)
+* Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* Install [Yarn](https://classic.yarnpkg.com/en/docs/install)
+* Install [Vue.js CLI](https://cli.vuejs.org/guide/installation.html)
+* Install [Visual Studio Code editor](https://code.visualstudio.com)
 
 
 ## About Front-End Development Projects with Vue.js
