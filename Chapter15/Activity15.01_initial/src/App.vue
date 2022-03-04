@@ -1,19 +1,10 @@
-<template>
-  <div id="app">
-    <BookSearch />
-  </div>
-</template>
-
-<script>
+<script setup>
 import BookSearch from './components/BookSearch.vue'
-
-export default {
-  name: 'app',
-  components: {
-    BookSearch
-  }
-}
 </script>
+
+<template>
+  <BookSearch />
+</template>
 
 <style>
 #app {
