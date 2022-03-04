@@ -1,0 +1,19 @@
+{
+  "name": "booksearch",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {
+    "eslint": "^8.9.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "vue": "^3.2.29"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.1.0",
+    "vite": "^2.7.13"
+  }
+}
