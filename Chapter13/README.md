@@ -1,6 +1,6 @@
-# Chapter13
+# Chapter12
 
-Chapter13 is set up to work with yarn workspaces as well as regular npm installs.
+Chapter12 is set up to work with yarn workspaces as well as regular npm installs.
 
 Yarn Workspaces save time on install and disk space by sharing dependencies between all the examples, exercises and Activities.
 
