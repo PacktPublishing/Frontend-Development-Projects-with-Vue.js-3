@@ -27,8 +27,21 @@
       />
     </div>
 
-    <div class="flex flex-row mt-12">
-      <button type="submit" @click="submitForm()">Submit</button>
+    <div class="w-1/2 flex md:flex-row mt-12">
+      <button
+        class="flex md:w-1/2 justify-center"
+        type="button"
+        @click="clear()"
+      >
+        Clear
+      </button>
+      <button
+        class="flex md:w-1/2 justify-center"
+        type="submit"
+        @click="submitForm()"
+      >
+        Submit
+      </button>
     </div>
 
   </section>
@@ -43,6 +56,11 @@ export default {
 		}
 	},
 	methods: {
+    clear() {
+      this.name = '';
+      this.occupation = '';
+      this.$emit('submit', {});
+    },
 		submitForm() {
 			this.$emit('submit', {
 				name: this.name,
