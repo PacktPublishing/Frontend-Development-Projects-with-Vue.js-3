@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Exercise from '@/components/Exercise2-01.vue'
+import { describe, it, expect } from 'vitest'
 
 describe('Exercise2-01.vue', () => {
   const wrapper = shallowMount(Exercise, {})

@@ -1,15 +1,12 @@
 <template>
   <div class="container">
     <h1>Shop Watcher</h1>
-
     <div>
       Black Friday sale
       <strike>Was {{ oldDiscount }}%</strike>
       <strong> Now {{ discount }}% OFF</strong>
     </div>
-
-    <br />
-    <a href="#" @click="updateDiscount">Increase Discount!</a>
+    <button @click="updateDiscount">Increase Discount!</button>
   </div>
 </template>
 
@@ -19,30 +16,30 @@ export default {
     return {
       oldDiscount: 0,
       discount: 5,
-    }
+    };
   },
   methods: {
     updateDiscount() {
-      this.discount = this.discount + 5
+      this.discount = this.discount + 5;
     },
   },
   watch: {
     discount(newValue, oldValue) {
-      this.oldDiscount = oldValue
+      this.oldDiscount = oldValue;
     },
   },
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .container {
   margin: 0 auto;
   padding: 30px;
   max-width: 600px;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   margin: 0;
 }
-a {
+button {
   display: inline-block;
   background: rgb(235, 50, 50);
   border-radius: 10px;

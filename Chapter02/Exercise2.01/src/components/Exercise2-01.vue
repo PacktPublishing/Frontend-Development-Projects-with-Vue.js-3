@@ -2,7 +2,6 @@
   <div class="container">
     <input v-model="firstName" placeholder="First name" />
     <input v-model="lastName" placeholder="Last name" />
-
     <h3 class="output">{{ fullName }}</h3>
   </div>
 </template>
