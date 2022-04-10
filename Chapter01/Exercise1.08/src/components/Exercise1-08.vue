@@ -18,21 +18,21 @@
 export default {
   data() {
     return {
-      interests: ['TV', 'Games', 'Sports'],
-    }
+      interests: ["TV", "Games", "Sports"],
+    };
   },
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 li {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #2c3e50;
   margin-top: 10px;
 }
 
 h1 {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #2c3e50;
   margin-top: 60px;
 }

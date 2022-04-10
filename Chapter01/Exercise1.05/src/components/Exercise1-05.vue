@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .title {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;

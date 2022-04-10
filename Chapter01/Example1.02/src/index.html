@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue.js CDN</title>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                Vue.createApp({
+                    data(){
+                        return {
+                            text: "Start using Vue.js today!"
+                        }
+                    }
+                }).mount('#vue-app')
+            })
+        </script>
+    </head>
+
+    <body>
+        <div id="vue-app">{{ text }}</div>
+    </body>
+</html>
+

@@ -1,5 +1,6 @@
-import { shallowMount } from '@vue/test-utils'
-import Exercise from '@/components/Exercise1-04.vue'
+import { shallowMount } from "@vue/test-utils";
+import Exercise from "@/components/Exercise1-04.vue";
+import { describe, it, expect } from "vitest";
 
 describe('Exercise1-04.vue', () => {
   it('renders props.title when passed', () => {

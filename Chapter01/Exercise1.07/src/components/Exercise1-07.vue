@@ -27,14 +27,14 @@
 export default {
   data() {
     return {
-      name: '',
-      language: '',
-    }
+      name: "",
+      language: "",
+    };
   },
-}
+};
 </script>
 
-<style lang="scss">
+<style>
 .form {
   display: flex;
   justify-content: space-evenly;
@@ -54,12 +54,13 @@ export default {
   padding: 40px 20px;
   border-radius: 10px;
   border: 1px solid #ececec;
+}
 
-  > li {
-    list-style: none;
-    + li {
-      margin-top: 20px;
-    }
-  }
+.overview > li {
+  list-style: none;
+}
+
+.overview + li {
+  margin-top: 20px;
 }
 </style>

@@ -1,12 +1,13 @@
-import { shallowMount } from '@vue/test-utils'
-import Exercise from '@/components/Exercise1-01.vue'
+import { shallowMount } from "@vue/test-utils";
+import Exercise from "@/components/Exercise1-01.vue";
+import { describe, it, expect } from "vitest";
 
-describe('Exercise1-01.vue', () => {
-  it('renders props.title when passed', () => {
-    const title = 'My first component!'
+describe("Exercise1-01.vue", () => {
+  it("renders props.title when passed", () => {
+    const title = "My first component!";
     const wrapper = shallowMount(Exercise, {
       propsData: { title },
-    })
-    expect(wrapper.text()).toMatch(title)
-  })
-})
+    });
+    expect(wrapper.text()).toMatch(title);
+  });
+});

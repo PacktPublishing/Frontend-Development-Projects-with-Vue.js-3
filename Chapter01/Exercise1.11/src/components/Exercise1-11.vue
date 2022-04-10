@@ -6,7 +6,7 @@
 
     <ul>
       <li v-for="n in 5" :key="n">
-        <a href="#" @click="addToCart(n)">Add {{ formatCurrency(n) }}</a>
+        <button @click="addToCart(n)">Add {{ formatCurrency(n) }}</button>
       </li>
     </ul>
   </div>
@@ -32,20 +32,17 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 ul {
   padding-left: 0;
 }
 li {
   display: block;
   list-style: none;
-
-  + li {
-    margin-top: 10px;
-  }
+  margin-block-start: 10px;
 }
 
-a {
+button {
   display: inline-block;
   background: rgb(235, 50, 50);
   border-radius: 10px;

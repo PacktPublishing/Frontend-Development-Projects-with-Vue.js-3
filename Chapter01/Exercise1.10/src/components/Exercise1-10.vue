@@ -3,7 +3,7 @@
     <h1>Triggering Vue Methods</h1>
     <ul>
       <li v-for="n in 5" :key="n">
-        <a href="#" @click="triggerAlert(n)">Trigger {{ n }}</a>
+        <button @click="triggerAlert(n)">Trigger {{ n }}</button>
       </li>
     </ul>
   </div>
@@ -13,10 +13,10 @@
 export default {
   methods: {
     triggerAlert(n) {
-      alert(`${n} has been clicked`)
+      alert(`${n} has been clicked`);
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -26,13 +26,13 @@ ul {
 li {
   display: block;
   list-style: none;
-
-  + li {
-    margin-top: 10px;
-  }
 }
 
-a {
+li + li {
+  margin-top: 10px;
+}
+
+button {
   display: inline-block;
   background: #4fc08d;
   border-radius: 10px;
