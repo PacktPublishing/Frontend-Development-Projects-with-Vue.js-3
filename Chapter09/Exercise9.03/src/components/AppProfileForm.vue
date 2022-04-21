@@ -27,16 +27,9 @@
       />
     </div>
 
-    <div class="w-1/2 flex md:flex-row mt-12">
+    <div class="flex align-center mt-12">
       <button
-        class="flex md:w-1/2 justify-center"
-        type="button"
-        @click="store.clear()"
-      >
-        Clear
-      </button>
-      <button
-        class="flex md:w-1/2 justify-center"
+        class=""
         type="submit"
         @click="submitForm()"
       >
