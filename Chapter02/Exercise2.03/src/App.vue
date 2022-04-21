@@ -3,11 +3,11 @@
 </template>
 
 <script>
-import Exercise from './components/Exercise2-03'
+import Exercise from "./components/Exercise2-03.vue";
 
 export default {
   components: {
     Exercise,
   },
-}
+};
 </script>

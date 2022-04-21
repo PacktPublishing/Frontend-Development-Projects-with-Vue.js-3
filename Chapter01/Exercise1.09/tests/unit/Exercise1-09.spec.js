@@ -1,32 +1,32 @@
-import { shallowMount } from '@vue/test-utils'
-import Exercise from '@/components/Exercise1-09.vue'
+import { shallowMount } from "@vue/test-utils";
+import Exercise from "@/components/Exercise1-09.vue";
+import { describe, it, expect } from "vitest";
 
-describe('Exercise1-09.vue', () => {
-  
-  it('array outputs correctly', () => {
+describe("Exercise1-09.vue", () => {
+  it("array outputs correctly", () => {
     const array = [
       {
-        title: 'TV',
-        favorite: ['Designated Survivor', 'Spongebob'],
+        title: "TV",
+        favorite: ["Designated Survivor", "Spongebob"],
       },
       {
-        title: 'Games',
-        favorite: ['CS:GO'],
+        title: "Games",
+        favorite: ["CS:GO"],
       },
       {
-        title: 'Sports',
+        title: "Sports",
         favorite: [],
       },
-    ]
-    
+    ];
+
     const wrapper = shallowMount(Exercise, {
       propsData: {
-        array
-      }
-    })
+        array,
+      },
+    });
 
-    expect(wrapper.html()).toContain(array[0].title)
-    expect(wrapper.html()).toContain(array[1].favorite[0])
-    expect(wrapper.html()).toContain(array[2].title)
-  })
-})
+    expect(wrapper.html()).toContain(array[0].title);
+    expect(wrapper.html()).toContain(array[1].favorite[0]);
+    expect(wrapper.html()).toContain(array[2].title);
+  });
+});

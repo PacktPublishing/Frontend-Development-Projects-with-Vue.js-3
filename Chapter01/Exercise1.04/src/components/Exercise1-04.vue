@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
+<style module>
 h1,
 h2 {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

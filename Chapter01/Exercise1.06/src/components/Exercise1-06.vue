@@ -19,22 +19,22 @@ export default {
   data() {
     return {
       // v-text
-      text: 'Directive text',
+      text: "Directive text",
       // v-html
-      html: 'Stylise</br>HTML in<br/><b>your data</b>',
+      html: "Stylise</br>HTML in<br/><b>your data</b>",
       // v-bind
       link: {
-        url: 'https://google.com',
-        target: '_blank',
-        tabindex: '0',
-        title: 'Go to Google',
+        url: "https://google.com",
+        target: "_blank",
+        tabindex: "0",
+        title: "Go to Google",
       },
-    }
+    };
   },
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 h2 {
   margin: 40px 0 0;
   font-weight: normal;

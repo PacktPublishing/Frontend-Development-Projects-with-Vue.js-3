@@ -1,0 +1,17 @@
+{
+  "name": "chapter08",
+  "version": "1.0.0",
+  "description": "Chapter 08 - Animations & Transitions",
+  "private": true,
+  "workspaces": [
+    "example8.01",
+    "example8.02",
+    "example8.03",
+    "exercise8.01",
+    "exercise8.02",
+    "exercise8.03",
+    "exercise8.04",
+    "activity8.01"
+  ],
+  "scripts": {}
+}

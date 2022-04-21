@@ -1,26 +1,27 @@
-import { shallowMount } from '@vue/test-utils'
-import Exercise from '@/components/Exercise6-v-show.vue'
+import { shallowMount } from "@vue/test-utils";
+import Exercise from "@/components/Exercise1-06-v-show.vue";
+import { describe, it, expect } from "vitest";
 
-describe('Exercise6-v-show.vue', () => {
-  const wrapper = shallowMount(Exercise, {})
+describe("Exercise6-v-show.vue", () => {
+  const wrapper = shallowMount(Exercise, {});
 
-  it('hidden elements to not be rendered', () => {
-    expect(wrapper.find('h1')).toEqual({})
-    expect(wrapper.find('h2')).toEqual({})
-  })
+  it("hidden elements to not be rendered", () => {
+    expect(wrapper.find("h1")).toEqual({});
+    expect(wrapper.find("h2")).toEqual({});
+  });
 
-  it('renders anchor tag with data', () => {
+  it("renders anchor tag with data", () => {
     const link = {
-      url: 'https://google.com',
-      target: '_blank',
-      tabindex: '0',
-      title: 'Go to Google',
-    }
+      url: "https://google.com",
+      target: "_blank",
+      tabindex: "0",
+      title: "Go to Google",
+    };
 
     wrapper.setData({
       link: link,
-    })
+    });
 
-    expect(wrapper.find('a').text()).toMatch(link.title)
-  })
-})
+    expect(wrapper.find("a").text()).toMatch(link.title);
+  });
+});

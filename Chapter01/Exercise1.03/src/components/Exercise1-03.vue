@@ -14,20 +14,18 @@
 export default {
   data() {
     return {
-      title: 'My list component!',
-      subtitle: 'Vue JS basics',
-      items: ['Item 1', 'Item 2', 'Item 3']
-    }
+      title: "My list component!",
+      subtitle: "Vue JS basics",
+      items: ["Item 1", "Item 2", "Item 3"],
+    };
   },
-}
+};
 </script>
 
-<style lang="scss" scoped>
-@import '../styles/typography';
-
+<style scoped>
 h1 {
   font-size: 50px;
   text-align: center;
-  color: $color-blue; // Use variables from imported stylesheets
+  color: #003366;
 }
 </style>

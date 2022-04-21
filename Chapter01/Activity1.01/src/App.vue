@@ -7,12 +7,13 @@
         v-model="input"
         @keyup.enter="addItem"
         ref="input"
-      /><button @click="addItem">Add item</button>
+      />
+      <button @click="addItem">Add item</button>
     </div>
 
     <ul v-if="shoppingList">
-      <li v-for="(item, i) in shoppingList" :key="i" class="item"
-        ><span>{{ item }}</span>
+      <li v-for="(item, i) in shoppingList" :key="i" class="item">
+        <span>{{ item }}</span>
         <button class="button--remove" @click="deleteItem(i)">Remove</button>
       </li>
     </ul>
@@ -25,33 +26,32 @@
 export default {
   data() {
     return {
-      input: '',
+      input: "",
       shoppingList: [],
-    }
+    };
   },
   methods: {
     addItem() {
       // Don't allow adding to the list if empty
-      if (!this.input) return
-      this.shoppingList.push(this.input)
+      if (!this.input) return;
+      this.shoppingList.push(this.input);
       // Clear the input after adding
-      this.input = ''
+      this.input = "";
       // Focus the input element again for quick typing!
-      this.$refs.input.focus()
+      this.$refs.input.focus();
     },
     deleteItem(i) {
       this.shoppingList = i
         ? this.shoppingList.filter((item, x) => x !== i)
-        : []
+        : [];
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
-@import 'styles/global';
+@import "styles/global";
 
-$color-green: #4fc08d;
 $color-grey: #2c3e50;
 
 .container {

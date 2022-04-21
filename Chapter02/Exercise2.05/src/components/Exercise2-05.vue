@@ -1,107 +1,62 @@
 <template>
   <div class="container">
-    <h1>Methods vs watchers vs computed props</h1>
+    <h1>Async fetch</h1>
 
-    <div class="col">
-      <input
-        type="text"
-        placeholder="Search with method"
-        v-model="input"
-        @keyup="searchMethod"
-      />
+    <button @click="getApi()">
+      {{ loading ? "Loading..." : "Learn something profound" }}
+    </button>
 
-      <ul>
-        <li v-for="(item, i) in methodFilterList" :key="i">{{ item }}</li>
-      </ul>
-    </div>
-
-    <div class="col">
-      <input type="text" placeholder="Search with computed" v-model="input2" />
-
-      <ul>
-        <li v-for="(item, i) in computedList" :key="i">{{ item }}</li>
-      </ul>
-    </div>
-
-    <div class="col">
-      <input type="text" placeholder="Search with watcher" v-model="input3" />
-
-      <ul>
-        <li v-for="(item, i) in watchFilterList" :key="i">{{ item }}</li>
-      </ul>
-    </div>
+    <blockquote v-if="quote">{{ quote }}</blockquote>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      // Shared
-      frameworkList: [
-        'Vue',
-        'React',
-        'Backbone',
-        'Ember',
-        'Knockout',
-        'jQuery',
-        'Angular',
-      ],
-
-      // Method
-      input: '',
-      methodFilterList: [],
-      // Computed
-      input2: '',
-      // Watcher
-      input3: '',
-      watchFilterList: [],
-    }
-  },
-  created() {
-    this.searchMethod()
-  },
-  watch: {
-    input3: {
-      handler() {
-        this.watchFilterList = this.frameworkList.filter(item =>
-          item.toLowerCase().includes(this.input3.toLowerCase())
-        )
-      },
-      immediate: true,
-    },
+      loading: false,
+      axiosResponse: {},
+    };
   },
   computed: {
-    computedList() {
-      return this.frameworkList.filter(item => {
-        return item.toLowerCase().includes(this.input2.toLowerCase())
-      })
+    quote() {
+      return this.axiosResponse && this.axiosResponse.slip
+        ? this.axiosResponse.slip.advice
+        : null;
     },
   },
   methods: {
-    searchMethod() {
-      this.methodFilterList = this.frameworkList.filter(item =>
-        item.toLowerCase().includes(this.input.toLowerCase())
-      )
+    async getApi() {
+      this.loading = true;
+      return axios.get("https://api.adviceslip.com/advice").then((response) => {
+        this.axiosResponse = response.data;
+        setTimeout(() => {
+          this.loading = false;
+        }, 4000);
+      });
     },
   },
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .container {
   margin: 0 auto;
   padding: 30px;
   max-width: 600px;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
-.col {
-  width: 33%;
-  height: 100%;
-  float: left;
-}
-input {
-  padding: 10px 6px;
-  margin: 20px 10px 10px 0;
+blockquote {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 30px;
+  background: #ededed;
+  border-left: 8px solid #78c0a8;
+  font-size: 24px;
+  color: #555555;
+  line-height: 1.6;
 }
 </style>
