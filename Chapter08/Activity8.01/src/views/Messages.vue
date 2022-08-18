@@ -8,14 +8,14 @@
   </div>
 </template>
 <script>
-import DefaultLayout from '../layouts/default';
+// import DefaultLayout from '../layouts/default';
 
 export default {
   props: {
     list: Array
   },
   created() {
-    this.$emit('update:layout', DefaultLayout);
+    // this.$emit('update:layout', DefaultLayout);
   }
 }
 </script>

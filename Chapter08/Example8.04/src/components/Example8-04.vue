@@ -15,7 +15,7 @@ export default {
       messages: [
         "Hello, how are you?",
         "The weather is nice",
-        "This is message feed",
+        "This is the message feed",
         "And I am the fourth message",
         "Chapter 8 is fun",
         "Animation is super awesome",
@@ -34,7 +34,7 @@ export default {
 </script>
 <style scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: all 2s;
+  transition: all 5s;
 }
 .fade-enter-from, .fade-leave-active {
   opacity: 0;
