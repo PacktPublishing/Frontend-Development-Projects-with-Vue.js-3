@@ -44,13 +44,13 @@ export default {
 }
 
 .slide-right {
-  animation: 1s slide-right 1s forwards;
+  animation: 5s slide-right 5s forwards;
   transform: translateX(-100%);
   transition: border-top 2s ease;
 }
 
 .slide-left {
-  animation: 1s slide-right 1s reverse;
+  animation: 5s slide-right 5s reverse;
   transform: translateX(-100%);
 }
 </style>

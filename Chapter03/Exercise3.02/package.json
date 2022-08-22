@@ -1,5 +1,5 @@
 {
-  "name": "exercise1-01",
+  "name": "exercise3.02",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -16,12 +16,11 @@
     "@rushstack/eslint-patch": "^1.1.0",
     "@vitejs/plugin-vue": "^2.2.2",
     "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/test-utils": "^2.0.0-rc.19",
     "eslint": "^8.5.0",
+    "@vue/test-utils": "^2.0.0-rc.19",
     "eslint-plugin-vue": "^8.2.0",
-    "jsdom": "^19.0.0",
     "prettier": "^2.5.1",
-    "sass": "^1.51.0",
+    "jsdom": "^19.0.0",
     "vite": "^2.8.4",
     "vitest": "^0.9.3"
   }

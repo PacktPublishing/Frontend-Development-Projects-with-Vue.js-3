@@ -17,9 +17,9 @@ export default {
       messages: [
         "Hello, how are you?",
         "The weather is nice",
-        "This is message feed",
+        "This is the message feed",
         "And I am the fourth message",
-        "Chapter 7 is fun",
+        "Chapter 8 is fun",
         "Animation is super awesome",
         `Sorry, I didn't know you called`,
         "Be patient, animation comes right up",
