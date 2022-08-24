@@ -1,33 +1,34 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: HomeView
   },
   {
     path: '/about',
     name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import('../views/AboutView.vue'),
+    props: true,
   },
   {
-    path: '/messages',
-    name: 'messages',
-    meta: {
-      transition: 'zoom',
-    },
-    component: () => import(/* webpackChunkName: "messages" */ '../views/Messages.vue')
+    path: '/messagesFeed',
+    name: 'messageFeed',
+    component: () => import('../views/MessageFeed.vue')
+  },
+  {
+    path: '/message',
+    name: 'message',
+    component: () => import('../views/Message.vue'),
+    props: true
   }
+
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 

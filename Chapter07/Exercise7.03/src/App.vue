@@ -1,91 +1,78 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/messages">Messages</router-link>
-    </div>
-    <transition :name="transition" :mode="mode">
-      <router-view/>
-    </transition>
-  </div>
-</template>
-<script>
-export default {
-  data() {
-    return {
-      transition: 'fade',
-      mode: 'out-in',
-    };
-  },
-  created() {
-    this.$router.beforeEach((
-      to, // The destination route 
-      from, //The source route 
-      next //The function to trigger to resolve the hook
-    ) => {
-      let transition = 'fade';
-
-      if (to.meta && to.meta.transition) {
-        transition = to.meta.transition;
-      }
-
-      this.transition = transition;
-      next();
-    })
-  }
-}
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
 </script>
-<style>
-.fade-enter, .fade-leave-to {
-  opacity: 0;
+
+<template>
+  <header>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink :to="{ name: 'about', params: { user: 'Alex' } }">About</RouterLink>
+      <RouterLink :to="{ name: 'messageFeed' }">Message Feed</RouterLink>
+    </nav>
+  </header>
+  <RouterView />
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s ease-in;
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
 }
 
-/**Zoom animation */
-.zoom-enter-active,
-.zoom-leave-active {
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: zoom;
-}
-
-.zoom-leave-active {
-  animation-direction: reverse;
-}
-
-@keyframes zoom {
-  from {
-    opacity: 0;
-    transform: scale3d(0.4, 0.4, 0.4);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+nav {
+  width: 100%;
+  font-size: 12px;
   text-align: center;
-  color: #2c3e50;
+  margin-top: 2rem;
 }
 
-#nav {
-  padding: 30px;
+nav a.router-link-exact-active {
+  color: var(--color-text);
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
