@@ -78,4 +78,27 @@ describe('PostList', () => {
 	expect(outputText).toContain('#angularjs')
   })
 
+  it('PostList renders tags for each post 2', () => {
+    
+    const wrapper = mount(PostList, {
+      propsData: {
+	  	posts:  [
+			{
+			title: "Title 1",
+			description: "Description 1"
+			},
+			{
+			title: "Title 2",
+			description: "Description 2"
+			}
+	      ]
+      },
+	  global: {
+	  	plugins: [ router ]
+	  }
+    })
+
+	expect(wrapper.text()).toMatchSnapshot();
+  });
+
 })
