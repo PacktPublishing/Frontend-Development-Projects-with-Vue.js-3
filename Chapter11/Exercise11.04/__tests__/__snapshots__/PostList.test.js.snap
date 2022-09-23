@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`PostList > PostList renders correctly 1`] = `"Title 1Description 1Title 2Description 2"`;
+
+exports[`PostList > PostList renders tags for each post 2 1`] = `"Title 1Description 1Title 2Description 2"`;
