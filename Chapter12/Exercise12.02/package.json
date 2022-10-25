@@ -1,5 +1,5 @@
 {
-  "name": "Exercise12.01",
+  "name": "Exercise12.02",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -53,5 +53,5 @@
     "> 1%",
     "last 2 versions"
   ],
-  "description": "Post tag lists"
+  "description": "Ellipsis filter tests"
 }

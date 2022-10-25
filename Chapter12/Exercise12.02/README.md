@@ -1,4 +1,4 @@
-# Exercise12.01: Post tag lists
+# Exercise12.02: Ellipsis filter tests
 
 
 ## Project setup

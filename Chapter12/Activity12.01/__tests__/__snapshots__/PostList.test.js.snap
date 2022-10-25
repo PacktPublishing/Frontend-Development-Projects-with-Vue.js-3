@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post List renders correctly 1`] = `
+"Title 1 Description 1 
+      #react
+    
+      #vue
+    Title 2 Description 2 
+      #html
+    
+      #angularjs"
+`;

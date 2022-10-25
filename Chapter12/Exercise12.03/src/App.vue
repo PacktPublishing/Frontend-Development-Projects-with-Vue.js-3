@@ -6,29 +6,39 @@
       >
       The Vue.js Workshop Blog
       </h2>
-      <PostList :posts="posts" />
+      <router-view
+        :posts="posts"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import PostList from './components/PostList.vue'
-
 export default {
-  components: {
-    PostList
-  },
   data() {
     return {
       posts: [
         {
+          slug: 'vue-react',
           title: 'Vue.js for React developers',
           description: 'React has massive popularity here are the key benefits of Vue.js over it.',
+          content:
+            `React has massive popularity here are the key benefits of Vue.js over it.
+            See the following table, we'll also look at how the is the content of the post.
+
+            There's more, we can map React concepts to Vue and vice-versa.`,
           tags: ['vue', 'react'],
         },
         {
+          slug: 'vue-angularjs',
           title: 'Migrating an AngularJS app to Vue.js',
           description: 'With many breaking changes, AngularJS developers have found it easier to retrain to Vue.js than Angular 2',
+          content:
+            `With many breaking changes, AngularJS developers have found it easier to retrain to Vue.js than Angular 2
+
+            Vue.js keeps the directive-driven templating style while adding a component model.
+
+            It's performant thanks to a great reactivity engine.`,
           tags: ['vue', 'angularjs']
         }
       ]

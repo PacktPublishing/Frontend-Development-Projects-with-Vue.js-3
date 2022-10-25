@@ -1,4 +1,4 @@
-# Exercise12.01: Post tag lists
+# Exercise12.03: Tag view page
 
 
 ## Project setup

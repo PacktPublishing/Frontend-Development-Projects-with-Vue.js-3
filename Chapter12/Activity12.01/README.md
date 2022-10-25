@@ -1,4 +1,4 @@
-# Exercise12.01: Post tag lists
+# Activiter12.01: Create a search page
 
 
 ## Project setup
