@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Example from "./components/Example2_02.vue";
+import Example from "./components/Example2_02.vue";
 
 export default {
   components: {
