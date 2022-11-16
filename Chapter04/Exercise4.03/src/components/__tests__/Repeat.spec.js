@@ -5,7 +5,7 @@ import Repeat from '../Repeat.vue'
 
 describe('Repeat', () => {
   it('renders properly', () => {
-    const wrapper = mount(Repeat, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+    const wrapper = mount(Repeat, { props: { config: { times: 1, content: 'Hello' } } })
+    expect(wrapper.text()).toContain('Hello')
   })
 })

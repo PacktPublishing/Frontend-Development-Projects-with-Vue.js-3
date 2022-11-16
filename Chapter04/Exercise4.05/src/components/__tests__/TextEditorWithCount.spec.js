@@ -5,7 +5,10 @@ import TextEditorWithCount from '../TextEditorWithCount.vue'
 
 describe('TextEditorWithCount', () => {
   it('renders properly', () => {
-    const wrapper = mount(TextEditorWithCount, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+    const wrapper = mount(TextEditorWithCount)
+
+    wrapper.find('textarea').setValue('Hello')
+
+    expect(wrapper.find('textarea').element.value).toBe('Hello')
   })
 })
