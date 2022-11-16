@@ -1,45 +1,21 @@
-<template>
-  <div id="app">
-    <Greeting :greeting="greeting" :who="who"/>
-    <button @click="newGreeting()">New Greeting</button>
-  </div>
-</template>
-
 <script>
-import Greeting from './components/Greeting.vue'
-
-const possibleGreetings = [
-    { greeting: 'Hello', who: 'Vue.js' },
-    { greeting: 'Hey', who: 'Everyone' },
-    { greeting: 'Hi', who: 'JavaScript' }
-]
-
+import Greeting from "./components/Greeting.vue";
 export default {
   components: {
-    Greeting
+    Greeting,
   },
   data() {
     return {
-      currentIndex: 0
-    }
+      greeting: "Hello",
+      who: "Vue.js",
+    };
   },
-  computed: {
-    currentGreeting() {
-      return possibleGreetings[this.currentIndex]
-    },
-    greeting() {
-      return this.currentGreeting.greeting
-    },
-    who() {
-      return this.currentGreeting.who
-    }
-  },
-  methods: {
-    newGreeting() {
-      this.currentIndex = this.currentIndex === possibleGreetings.length - 1
-        ? 0
-        : this.currentIndex + 1
-    }
-  }
-}
+};
 </script>
+
+<template>
+  <div id="app">
+    <input placeholder="What is your name" v-model="who" />
+    <Greeting greeting="Hi" :who="who" />
+  </div>
+</template>

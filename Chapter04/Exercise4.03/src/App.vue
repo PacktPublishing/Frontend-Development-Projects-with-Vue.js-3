@@ -1,9 +1,8 @@
 <template>
-  <div id="app">
+  <main>
     <Repeat :config="{ times: 3, content: 'Repeat me.' }" />
-  </div>
+  </main>
 </template>
-
 <script>
 import Repeat from './components/Repeat.vue'
 

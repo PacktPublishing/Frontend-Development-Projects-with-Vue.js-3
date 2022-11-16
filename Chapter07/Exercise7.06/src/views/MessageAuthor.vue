@@ -1,32 +1,18 @@
 <template>
   <h3>Author:</h3>
-  <p>{{author}}</p>
+  <p>{{message.author}}</p>
 </template>
-<script>
-import messages from '../assets/messages.js';
+<script setup>
+import { defineProps } from 'vue'
 
-export default {
-  props: {
-    id: {
-      type: String,
-      required: true,
-    }
+const { message } = defineProps({
+  id: {
+    default: '',
+    type: String
   },
-  data() {
-    return {
-      author: '',
-    }
-  },
-  beforeRouteEnter(to, from, next) {
-    next(vm => {
-      const message = messages[to.params.id];
-      vm.author = message.author;
-    })
-  },
-  beforeRouteUpdate(to, from, next) {
-    const message = messages[to.params.id];
-    vm.author = message.author;
-    next();
+  message: {
+    default: () => ({ author: '' }),
+    type: Object
   }
-}
+})
 </script>

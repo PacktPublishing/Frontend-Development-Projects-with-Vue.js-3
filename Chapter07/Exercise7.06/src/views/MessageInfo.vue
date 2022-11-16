@@ -4,29 +4,17 @@
     <p>{{message.sent}}</p>
   </div>
 </template>
-<script>
-import messages from '../assets/messages.js';
-export default {
-  props: {
-    id: {
-      type: String,
-      required: true,
-    }
+<script setup>
+import { defineProps } from 'vue'
+
+const { message } = defineProps({
+  id: {
+    default: '',
+    type: String
   },
-  data() {
-    return {
-      message: {},
-    }
-  },
-  beforeRouteEnter(to, from, next) {
-    next(vm => {
-      vm.message = messages[to.params.id];
-    })
-  },
-  beforeRouteUpdate(to, from, next) {
-    const message = messages[to.params.id];
-    vm.message = message;
-    next();
+  message: {
+    default: () => ({ sent: '' }),
+    type: Object
   }
-}
+})
 </script>
