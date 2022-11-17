@@ -1,17 +1,24 @@
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import Exercise from "@/components/Exercise1-10.vue";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
+
+// Suppress window.alert errors
+vi.spyOn(window, "alert").mockReturnValue();
 
 describe("Exercise1-10.vue", () => {
   const wrapper = mount(Exercise);
 
   it("anonymous loop outputs correctly", () => {
-    expect(wrapper.findAll("li").length).toEqual(5);
+    expect(wrapper.findAll("li").length).toEqual(8);
   });
-  it("trigger alert", () => {
-    const triggerAlertStub = sinon.stub();
-    wrapper.setMethods({ triggerAlert: triggerAlertStub });
-    wrapper.findAll("li").at(1).trigger("click");
-    expect(triggerAlertStub.called).toBe(false);
+  
+  it("deleted item is removed from array", () => {
+    wrapper.setData({
+      list: [1, 2, 3],
+    });
+
+    wrapper.vm.deleteItem(1);
+
+    expect(wrapper.vm.list.length).toEqual(2);
   });
 });

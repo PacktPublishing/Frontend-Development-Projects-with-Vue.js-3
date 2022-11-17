@@ -14,7 +14,10 @@ export default {
   },
 };
 </script>
-
+//<script setup>
+// const title ='My first component!';
+// const isUppercase = true;
+// </script>
 <style>
 h1 {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

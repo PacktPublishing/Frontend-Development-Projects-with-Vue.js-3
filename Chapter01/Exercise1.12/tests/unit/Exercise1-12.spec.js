@@ -1,23 +1,16 @@
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import Exercise from "@/components/Exercise1-12.vue";
-import { describe, it, expect, spyOn } from "vitest";
-
-// Suppress window.alert errors
-spyOn(window, "alert").mockReturnValue();
+import { describe, it, expect } from "vitest";
 
 describe("Exercise1-12.vue", () => {
-  const wrapper = mount(Exercise);
+  it("renders props.title when passed", () => {
+    const title = "CSS module component!";
+    const subtitle = "The fourth exercise";
+    const wrapper = shallowMount(Exercise, {});
 
-  it("anonymous loop outputs correctly", () => {
-    expect(wrapper.findAll("li").length).toEqual(8);
-  });
-  it("deleted item is removed from array", () => {
-    wrapper.setData({
-      list: [1, 2, 3],
-    });
+    wrapper.setData({ subtitle: subtitle, title: title });
 
-    wrapper.vm.deleteItem(1);
-
-    expect(wrapper.vm.list.length).toEqual(2);
+    expect(wrapper.find("h1").text()).toMatch(title);
+    expect(wrapper.find("h2").text()).toMatch(subtitle);
   });
 });

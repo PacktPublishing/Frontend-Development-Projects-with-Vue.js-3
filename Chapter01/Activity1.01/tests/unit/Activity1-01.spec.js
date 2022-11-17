@@ -1,9 +1,9 @@
 import { shallowMount } from "@vue/test-utils";
-import Exercise from "@/components/Exercise1-02.vue";
+import App from "@/App.vue";
 import { describe, it, expect } from "vitest";
 
 describe("Activity 1", () => {
-  const { vm } = shallowMount(Exercise);
+  const { vm } = shallowMount(App);
   const list = ["Item 1", "Item 2"];
 
   it("addItem should add Array item", () => {

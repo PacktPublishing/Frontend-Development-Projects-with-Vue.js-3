@@ -49,11 +49,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "styles/global";
-
-$color-grey: #2c3e50;
-
+<style>
 .container {
   max-width: 600px;
   margin: 80px auto;

@@ -1,5 +1,6 @@
 import Exercise from "@/components/Exercise1-07.vue";
 import { describe, it, expect } from "vitest";
+import { mount } from "@vue/test-utils";
 
 describe("Exercise1-07.vue", () => {
   it("data returns correctly in list element", () => {

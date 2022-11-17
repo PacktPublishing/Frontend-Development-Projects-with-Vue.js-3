@@ -1,19 +1,16 @@
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import Exercise from "@/components/Exercise1-08.vue";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 
 describe("Exercise1-08.vue", () => {
-  it("array outputs data into template", () => {
-    const array = ["TV", "Games", "Sports"];
+  const wrapper = mount(Exercise);
 
-    const wrapper = shallowMount(Exercise, {
-      propsData: {
-        array,
-      },
-    });
-
-    expect(wrapper.html()).toContain(array[0]);
-    expect(wrapper.html()).toContain(array[1]);
-    expect(wrapper.html()).toContain(array[2]);
+  it("anonymous loop outputs correctly", () => {
+    expect(wrapper.findAll("li").length).toEqual(5);
+  });
+  it("trigger alert", () => {
+    const triggerSpy = vi.spyOn(wrapper.vm, 'triggerAlert')
+    wrapper.findAll("button")[0].trigger("click");
+    expect(triggerSpy).toBeCalled();
   });
 });

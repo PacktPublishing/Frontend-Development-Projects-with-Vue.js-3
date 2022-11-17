@@ -3,25 +3,11 @@ import Exercise from "@/components/Exercise1-06.vue";
 import { describe, it, expect } from "vitest";
 
 describe("Exercise1-06.vue", () => {
-  const wrapper = shallowMount(Exercise, {});
+  it("should render", () => {
+    const wrapper = shallowMount(Exercise);
 
-  it("hidden elements to not be rendered", () => {
-    expect(wrapper.find("h1")).toEqual({ selector: "h1" });
-    expect(wrapper.find("h2")).toEqual({ selector: "h2" });
-  });
-
-  it("renders anchor tag with data", () => {
-    const link = {
-      url: "https://google.com",
-      target: "_blank",
-      tabindex: "0",
-      title: "Go to Google",
-    };
-
-    wrapper.setData({
-      link: link,
-    });
-
-    expect(wrapper.find("a").text()).toMatch(link.title);
+    expect(wrapper.find("h1").text()).toEqual(
+      "Looping through array of objects"
+    );
   });
 });

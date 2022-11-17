@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 v-show="true" v-once v-text="text">Loading...</h1>
+    <h1 v-show="true" v-once v-text="text" />
 
     <h2 v-show="false" v-html="html" />
 
@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 h2 {
   margin: 40px 0 0;
   font-weight: normal;

@@ -1,32 +1,25 @@
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import Exercise from "@/components/Exercise1-09.vue";
 import { describe, it, expect } from "vitest";
 
 describe("Exercise1-09.vue", () => {
-  it("array outputs correctly", () => {
-    const array = [
-      {
-        title: "TV",
-        favorite: ["Designated Survivor", "Spongebob"],
-      },
-      {
-        title: "Games",
-        favorite: ["CS:GO"],
-      },
-      {
-        title: "Sports",
-        favorite: [],
-      },
-    ];
+  const wrapper = mount(Exercise);
 
-    const wrapper = shallowMount(Exercise, {
-      propsData: {
-        array,
-      },
+  it("anonymous loop outputs correctly", () => {
+    expect(wrapper.findAll("li").length).toEqual(5);
+  });
+  it("format currency correctly", () => {
+    expect(wrapper.vm.formatCurrency(100)).toEqual("$100.00");
+  });
+  it("add to cart updates data", () => {
+    wrapper.setProps({
+      totalItems: 0,
+      totalCost: 0,
     });
 
-    expect(wrapper.html()).toContain(array[0].title);
-    expect(wrapper.html()).toContain(array[1].favorite[0]);
-    expect(wrapper.html()).toContain(array[2].title);
+    wrapper.vm.addToCart(5);
+
+    expect(wrapper.vm.totalItems).toEqual(1);
+    expect(wrapper.vm.totalCost).toEqual(5);
   });
 });

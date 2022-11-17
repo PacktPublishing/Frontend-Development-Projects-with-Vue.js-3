@@ -1,16 +1,20 @@
-import { shallowMount } from "@vue/test-utils";
 import Exercise from "@/components/Exercise1-04.vue";
 import { describe, it, expect } from "vitest";
+import { mount } from "@vue/test-utils";
 
-describe('Exercise1-04.vue', () => {
-  it('renders props.title when passed', () => {
-    const title = 'CSS module component!'
-    const subtitle = 'The fourth exercise'
-    const wrapper = shallowMount(Exercise, {})
+describe("Exercise1-04.vue", () => {
+  it("data returns correctly in list element", () => {
+    const name = "John Doe";
+    const language = "Javascript";
 
-    wrapper.setData({ subtitle: subtitle, title: title })
+    const wrapper = mount(Exercise, {
+      propsData: {
+        name,
+        language,
+      },
+    });
 
-    expect(wrapper.find('h1').text()).toMatch(title)
-    expect(wrapper.find('h2').text()).toMatch(subtitle)
-  })
-})
+    expect(wrapper.html()).toContain(name);
+    expect(wrapper.html()).toContain(language);
+  });
+});

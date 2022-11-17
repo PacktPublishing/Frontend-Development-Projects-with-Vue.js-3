@@ -1,34 +1,66 @@
 <template>
-  <div>
-    <h1 :class="$style.title">{{ title }}</h1>
-    <h2 :class="$style.subtitle">{{ subtitle }}</h2>
-  </div>
+  <section>
+    <div class="form">
+      <label>
+        Name
+        <input type="text" v-model="name" />
+      </label>
+      <label>
+        Preferred javascript style
+        <select name="language" v-model="language">
+          <option value="Javascript">JavaScript</option>
+          <option value="TypeScript">TypeScript</option>
+          <option value="CoffeeScript">CoffeeScript</option>
+          <option value="Dart">Dart</option>
+        </select>
+      </label>
+    </div>
+    <ul class="overview">
+      <li><strong>Overview</strong></li>
+      <li>Name: {{ name }}</li>
+      <li>Preference: {{ language }}</li>
+    </ul>
+  </section>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      title: 'CSS module component!',
-      subtitle: 'The fourth exercise',
-    }
+      name: "",
+      language: "",
+    };
   },
-}
+};
 </script>
 
-<style module>
-h1,
-h2 {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
+<style>
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 800px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #ececec;
 }
-.title {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  margin-top: 60px;
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  border-radius: 10px;
+  border: 1px solid #ececec;
 }
-.subtitle {
-  color: #4fc08d;
-  font-style: italic;
+
+.overview > li {
+  list-style: none;
+}
+
+.overview + li {
+  margin-top: 20px;
 }
 </style>

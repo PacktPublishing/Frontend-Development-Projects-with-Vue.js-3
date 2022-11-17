@@ -1,13 +1,11 @@
 <template>
   <div>
-    <h1>Returning Methods</h1>
-
-    <div>Cart({{ totalItems }}) {{ formatCurrency(totalCost) }}</div>
-
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
     <ul>
-      <li v-for="n in 5" :key="n">
-        <button @click="addToCart(n)">Add {{ formatCurrency(n) }}</button>
-      </li>
+      <li>{{ items[0] }}</li>
+      <li>{{ items[1] }}</li>
+      <li>{{ items[2] }}</li>
     </ul>
   </div>
 </template>
@@ -16,39 +14,19 @@
 export default {
   data() {
     return {
-      totalItems: 0,
-      totalCost: 0,
-    }
+      title: "My list component!",
+      subtitle: "Vue JS basics",
+      items: ["Item 1", "Item 2", "Item 3"],
+    };
   },
-  methods: {
-    addToCart(n) {
-      this.totalItems = this.totalItems + 1
-      this.totalCost = this.totalCost + n
-    },
-    formatCurrency(val) {
-      return `$${val.toFixed(2)}`
-    },
-  },
-}
+};
 </script>
 
-<style scoped>
-ul {
-  padding-left: 0;
-}
-li {
-  display: block;
-  list-style: none;
-  margin-block-start: 10px;
-}
+<style scoped lang="scss">
+@import '../styles/typography.scss';
 
-button {
-  display: inline-block;
-  background: rgb(235, 50, 50);
-  border-radius: 10px;
-  font-size: 10px;
-  color: white;
-  padding: 5px 10px;
-  text-decoration: none;
+h1 {
+  font-size: 50px;
+  color: $color-blue; // Use variables from imported stylesheets
 }
 </style>

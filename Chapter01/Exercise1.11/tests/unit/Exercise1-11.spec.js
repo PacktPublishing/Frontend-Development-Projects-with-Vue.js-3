@@ -1,25 +1,29 @@
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import Exercise from "@/components/Exercise1-11.vue";
 import { describe, it, expect } from "vitest";
 
 describe("Exercise1-11.vue", () => {
-  const wrapper = mount(Exercise);
-
-  it("anonymous loop outputs correctly", () => {
-    expect(wrapper.findAll("li").length).toEqual(5);
-  });
-  it("format currency correctly", () => {
-    expect(wrapper.vm.formatCurrency(100)).toEqual("$100.00");
-  });
-  it("add to cart updates data", () => {
-    wrapper.setProps({
-      totalItems: 0,
-      totalCost: 0,
+  it("renders props.title when passed", () => {
+    const title = "My list component!";
+    const subtitle = "Vue JS basics";
+    const wrapper = shallowMount(Exercise, {
+      propsData: { title },
     });
 
-    wrapper.vm.addToCart(5);
+    wrapper.setData({ subtitle: subtitle, title: title });
 
-    expect(wrapper.vm.totalItems).toEqual(1);
-    expect(wrapper.vm.totalCost).toEqual(5);
+    expect(wrapper.text()).toMatch(title);
+    expect(wrapper.find("h2").text()).toMatch(subtitle);
+  });
+
+  it("renders list items from the array", () => {
+    const array = ["Item 1", "Item 2", "Item 3"];
+    const wrapper = shallowMount(Exercise, {});
+
+    wrapper.setData({ items: array });
+
+    expect(wrapper.findAll("li").at(0).text()).toMatch(array[0]);
+    expect(wrapper.findAll("li").at(1).text()).toMatch(array[1]);
+    expect(wrapper.findAll("li").at(2).text()).toMatch(array[2]);
   });
 });

@@ -1,13 +1,13 @@
 import { shallowMount } from "@vue/test-utils";
-import Exercise from "@/components/Exercise1-06-v-show.vue";
+import Exercise from "@/components/Exercise1-03-v-show.vue";
 import { describe, it, expect } from "vitest";
 
-describe("Exercise6-v-show.vue", () => {
+describe("Exercise1-03-v-show.vue", () => {
   const wrapper = shallowMount(Exercise, {});
 
   it("hidden elements to not be rendered", () => {
-    expect(wrapper.find("h1")).toEqual({});
-    expect(wrapper.find("h2")).toEqual({});
+    expect(wrapper.find("h1").text()).toEqual("Directive text");
+    expect(wrapper.find("h2").isVisible()).toBe(false);
   });
 
   it("renders anchor tag with data", () => {

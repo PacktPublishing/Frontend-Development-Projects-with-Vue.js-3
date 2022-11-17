@@ -4,10 +4,7 @@ import { describe, it, expect } from "vitest";
 
 describe("Exercise1-01.vue", () => {
   it("renders props.title when passed", () => {
-    const title = "My first component!";
-    const wrapper = shallowMount(Exercise, {
-      propsData: { title },
-    });
-    expect(wrapper.text()).toMatch(title);
+    const wrapper = shallowMount(Exercise);
+    expect(wrapper.text()).toMatch("My first component!");
   });
 });

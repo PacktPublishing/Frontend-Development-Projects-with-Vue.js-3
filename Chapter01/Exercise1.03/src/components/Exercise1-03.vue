@@ -1,12 +1,16 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <h2>{{ subtitle }}</h2>
-    <ul>
-      <li>{{ items[0] }}</li>
-      <li>{{ items[1] }}</li>
-      <li>{{ items[2] }}</li>
-    </ul>
+    <h1 v-if="false" v-once v-text="text" />
+
+    <h2 v-else-if="false" v-html="html" />
+
+    <a
+      v-else
+      :href="link.url"
+      :target="link.target"
+      :tabindex="link.tabindex"
+      v-text="link.title"
+    />
   </div>
 </template>
 
@@ -14,18 +18,29 @@
 export default {
   data() {
     return {
-      title: "My list component!",
-      subtitle: "Vue JS basics",
-      items: ["Item 1", "Item 2", "Item 3"],
+      // v-text
+      text: "Directive text",
+      // v-html
+      html: "Stylise</br>HTML in<br/><b>your data</b>",
+      // v-bind
+      link: {
+        url: "https://google.com",
+        target: "_blank",
+        tabindex: "0",
+        title: "Go to Google",
+      },
     };
   },
 };
 </script>
 
 <style scoped>
-h1 {
-  font-size: 50px;
-  text-align: center;
-  color: #003366;
+h2 {
+  margin: 40px 0 0;
+  font-weight: normal;
+}
+a {
+  display: block;
+  margin-top: 40px;
 }
 </style>

@@ -1,14 +1,9 @@
 <template>
   <div>
-    <h1>Looping through arrays</h1>
+    <h1>Triggering Vue Methods</h1>
     <ul>
       <li v-for="n in 5" :key="n">
-        {{ n }}
-      </li>
-    </ul>
-    <ul>
-      <li v-for="(item, n) in interests" :key="n">
-        {{ item }}
+        <button @click="triggerAlert(n)">Trigger {{ n }}</button>
       </li>
     </ul>
   </div>
@@ -16,24 +11,33 @@
 
 <script>
 export default {
-  data() {
-    return {
-      interests: ["TV", "Games", "Sports"],
-    };
+  methods: {
+    triggerAlert(n) {
+      alert(`${n} has been clicked`);
+    },
   },
 };
 </script>
 
 <style scoped>
+ul {
+  padding-left: 0;
+}
 li {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  display: block;
+  list-style: none;
+}
+
+li + li {
   margin-top: 10px;
 }
 
-h1 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  margin-top: 60px;
+button {
+  display: inline-block;
+  background: #4fc08d;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 </style>
