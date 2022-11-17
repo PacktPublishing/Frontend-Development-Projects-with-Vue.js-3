@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Looping through array of objects</h1>
-    <ul>
-      <li v-for="(item, n) in interests" :key="n">
-        {{ item.title }}
+    <h1>Returning Methods</h1>
 
-        <ol v-if="item.favorite.length > 0">
-          <li v-for="(fav, m) in item.favorite" :key="m">{{ fav }}</li>
-        </ol>
+    <div>Cart({{ totalItems }}) {{ formatCurrency(totalCost) }}</div>
+
+    <ul>
+      <li v-for="n in 5" :key="n">
+        <button @click="addToCart(n)">Add {{ formatCurrency(n) }}</button>
       </li>
     </ul>
   </div>
@@ -17,50 +16,39 @@
 export default {
   data() {
     return {
-      interests: [
-        {
-          title: "TV",
-          favorite: ["Designated Survivor", "Spongebob"],
-        },
-        {
-          title: "Games",
-          favorite: ["CS:GO"],
-        },
-        {
-          title: "Sports",
-          favorite: [],
-        },
-      ],
-    };
+      totalItems: 0,
+      totalCost: 0,
+    }
   },
-};
+  methods: {
+    addToCart(n) {
+      this.totalItems = this.totalItems + 1
+      this.totalCost = this.totalCost + n
+    },
+    formatCurrency(val) {
+      return `$${val.toFixed(2)}`
+    },
+  },
+}
 </script>
 
 <style scoped>
-h1 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  margin-top: 60px;
+ul {
+  padding-left: 0;
 }
-
 li {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  max-width: 200px;
-  background: #e9e9e9;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px 10px 10px 0px;
+  display: block;
   list-style: none;
+  margin-block-start: 10px;
 }
 
-li + li {
-  margin-top: 10px;
-}
-
-ol {
-  margin-top: 4px;
-  padding: 10px;
-  padding-left: 20px;
+button {
+  display: inline-block;
+  background: rgb(235, 50, 50);
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
 }
 </style>
