@@ -1,10 +1,16 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import axios from './plugins/axios'
 
-Vue.config.productionTip = false
+import './assets/main.css'
+const BASE_URL = 'https://jsonplaceholder.typicode.com'
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+app.use(axios)
+app.use({
+    install(_app) {
+        _app.config.globalProperties.$baseUrl = BASE_URL
+    }
+})
+
+app.mount('#app')

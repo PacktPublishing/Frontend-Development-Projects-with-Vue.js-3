@@ -1,28 +1,23 @@
 <template>
   <div id="app">
-    <router-view/>
+    <pre>{{ debug(myObj) }}</pre>
   </div>
 </template>
+<script>
+import debug from "./mixins/debug.js";
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  mixins: [debug],
+  data() {
+    return {
+      myObj: {
+        some: "data",
+        other: "values",
+      },
+    };
+  },
+  created() {
+    console.log(this.debug(this.myObj));
+  },
+};
+</script>

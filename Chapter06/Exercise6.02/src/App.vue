@@ -1,33 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link :to="{ name: 'messageFeed' }">Message Feed</router-link>
+    <div v-for="todo in todos" :key="todo.id">
+      <ul>
+        <li>Title: {{ todo.title }}</li>
+        <li>Status: {{ todo.completed ? "Completed" : "Not Completed" }}</li>
+      </ul>
     </div>
-    <router-view/>
   </div>
 </template>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+export default {
+  async mounted() {
+    const { data: todos } = await this.$axios(
+      "https://jsonplaceholder.typicode.com/todos"
+    );
+    this.todos = todos;
+  },
+  data() {
+    return { todos: [] };
+  },
+};
+</script>
