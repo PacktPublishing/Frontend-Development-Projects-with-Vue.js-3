@@ -9,9 +9,3 @@
 <script setup>
 import { store } from '@/store.js';
 </script>
-
-<script>
-export default {
-	// more stuff here later...
-}
-</script>

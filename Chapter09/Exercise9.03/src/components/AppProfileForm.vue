@@ -27,15 +27,6 @@
       />
     </div>
 
-    <div class="flex align-center mt-12">
-      <button
-        class=""
-        type="submit"
-        @click="submitForm()"
-      >
-        Submit
-      </button>
-    </div>
   </section>
 </template>
 
@@ -43,13 +34,3 @@
 import { store } from '@/store.js';
 </script>
 
-<script>
-export default {
-	data() {
-		return {
-		}
-	},
-	methods: {
-	}
-}
-</script>

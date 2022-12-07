@@ -2,6 +2,21 @@
 import AppHeader from '@/components/AppHeader.vue'
 import AppProfileDisplay from '@/components/AppProfileDisplay.vue'
 import AppProfileForm from '@/components/AppProfileForm.vue'
+
+import { reactive } from 'vue'
+
+const formData = reactive({
+  name:'', occupation:'', 
+  organization:'', email:'', phonenumber:''
+});
+
+function update(e) {
+  formData.name = e.name;
+  formData.occupation = e.occupation;
+  formData.organization = e.organization;
+  formData.email = e.email;
+  formData.phonenumber = e.phonenumber;
+}
 </script>
 
 <template>

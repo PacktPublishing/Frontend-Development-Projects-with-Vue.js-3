@@ -47,26 +47,24 @@
   </section>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			name:'',
-      occupation:''
-		}
-	},
-	methods: {
-    clear() {
-      this.name = '';
-      this.occupation = '';
-      this.$emit('submit', {});
-    },
-		submitForm() {
-			this.$emit('submit', {
-				name: this.name,
-        occupation: this.occupation
-			})
-		}
-	}
+<script setup>
+import { ref } from 'vue'
+const emit = defineEmits(['submit'])
+
+const name = ref('');
+const occupation = ref('');
+
+function submitForm() {
+  emit('submit', { 
+    name: this.name, 
+    occupation: this.occupation
+  });
+}
+
+function clear() {
+  this.name = '';
+  this.occupation = '';
+  emit('submit', {});
 }
 </script>
+

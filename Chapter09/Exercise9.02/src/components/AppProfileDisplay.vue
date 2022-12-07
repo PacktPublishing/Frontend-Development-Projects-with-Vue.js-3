@@ -6,15 +6,6 @@
   </section>
 </template>
 
-<script>
-export default {
-	props: {
-		formData: {
-			type: Object, 
-			default() {
-				return {}
-			}
-		}
-	}
-}
+<script setup>
+const props = defineProps({formData:Object});
 </script>

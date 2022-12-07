@@ -2,6 +2,15 @@
 import AppHeader from '@/components/AppHeader.vue'
 import AppProfileDisplay from '@/components/AppProfileDisplay.vue'
 import AppProfileForm from '@/components/AppProfileForm.vue'
+
+import { reactive } from 'vue'
+
+const formData = reactive({name:'', occupation:''});
+
+function update(e) {
+  formData.name = e.name;
+  formData.occupation = e.occupation;
+}
 </script>
 
 <template>
@@ -13,18 +22,3 @@ import AppProfileForm from '@/components/AppProfileForm.vue'
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      formData: {}
-    }
-  },
-  methods: {
-    update(formData) {
-      this.formData = formData;
-    }
-  }
-}
-</script>
