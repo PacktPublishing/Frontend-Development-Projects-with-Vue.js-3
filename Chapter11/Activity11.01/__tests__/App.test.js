@@ -9,8 +9,8 @@ describe('App', () => {
         global: {
           stubs:['router-link','router-view'],
       }
-  })
-  expect(wrapper.text()).toContain('The Vue.js Workshop Blog')
+    })
+    expect(wrapper.text()).toContain('The Vue.js Workshop Blog')
   })
 })
 

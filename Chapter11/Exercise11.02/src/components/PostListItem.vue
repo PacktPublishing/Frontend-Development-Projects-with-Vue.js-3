@@ -30,18 +30,13 @@ defineExpose({ truncated, ellipsis })
 <template>
 	<div>
 	<h3>{{ title }}</h3>
-	<p>
-		{{ ellipsis }}
-	</p>
+	<p>{{ ellipsis }}</p>
 
 	<ul>
-      <li
-        v-for="tag in tags"
-        :key="tag"
-      >
-        #{{ tag }}
-      </li>
-    </ul>
+    <li v-for="tag in tags" :key="tag">
+      #{{ tag }}
+    </li>
+  </ul>
 
 	</div>
 </template>

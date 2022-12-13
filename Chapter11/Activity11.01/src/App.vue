@@ -27,6 +27,7 @@ const posts = ref([
 
 
 const relevantPosts = computed(() => {
+  if(!route) return posts;
   const { q } = route.query;
   if(!q) return posts.value;
   return posts.value.filter(
@@ -50,13 +51,4 @@ const relevantPosts = computed(() => {
   <CookieBanner />
 </template>
 
-
-<script>
-export default {
-  data() {
-    return {
-    }
-  }
-}
-</script>
 
