@@ -1,0 +1,21 @@
+build:
+  image: node:lts
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - dist
+
+lint:
+  image: node:lts
+  stage: test
+  script:
+    - npm ci
+    - npm run lint
