@@ -8,7 +8,7 @@ describe("PizzaItem.vue", () => {
   it("watcher updates values", async () => {
     await wrapper.vm.updateDiscount();
 
-    expect(wrapper.vm.oldDiscount).toEqual(5);
     expect(wrapper.vm.discount).toEqual(10);
+    expect(wrapper.vm.newPrice).toEqual(wrapper.vm.pizza.price * 0.9);
   });
 });

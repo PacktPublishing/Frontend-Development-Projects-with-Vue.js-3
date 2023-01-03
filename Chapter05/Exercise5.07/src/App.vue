@@ -1,7 +1,7 @@
 <template>
-  <UserInput />
+  <Movies />
 </template>
 
 <script setup>
-import UserInput from "./components/UserInput.vue";
+import Movies from "./components/Movies.vue";
 </script>

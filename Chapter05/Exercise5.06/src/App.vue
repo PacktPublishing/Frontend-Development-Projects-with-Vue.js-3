@@ -2,12 +2,6 @@
   <Exercise />
 </template>
 
-<script>
-import Exercise from "./components/Exercise1-10.vue";
-
-export default {
-  components: {
-    Exercise,
-  },
-};
+<script setup>
+import Exercise from "./components/Exercise5-06.vue";
 </script>

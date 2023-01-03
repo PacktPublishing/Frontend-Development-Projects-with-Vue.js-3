@@ -24,7 +24,7 @@ const addToLanguageList = (event) => {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   margin: 0 auto;
   padding: 30px;

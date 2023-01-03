@@ -1,34 +1,49 @@
 <template>
   <div class="container">
-    <h1>Shop Watcher</h1>
-    <div>
-      Black Friday sale
-      <strike>Was {{ oldDiscount }}%</strike>
-      <strong> Now {{ discount }}% OFF</strong>
+    <h1>{{ pizza.name }}</h1>
+    <div class="campaign-wrapper">
+      Monday Special: {{ discount }}% off!
+      <strike>Was ${{ pizza.price }}</strike>
+      <strong> Now at ${{ newPrice }} ONLY</strong>
     </div>
-    <button @click="updateDiscount">Increase Discount!</button>
+    <button @click="updateDiscount" class="decrease-btn">Get a discount!</button>
+    <button @click="increasePrice" class="increase-btn">Increase the price!</button>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      oldDiscount: 0,
-      discount: 5,
-    };
+<script setup>
+import { ref, reactive, watch } from "vue";
+
+const discount = ref(5);
+const pizza = reactive({
+  name: "Pepperoni Pizza",
+  price: 10,
+});
+const newPrice = ref(pizza.price);
+
+watch(
+  discount,
+  (newValue) => {
+    newPrice.value = pizza.price - (pizza.price * newValue) / 100;
   },
-  methods: {
-    updateDiscount() {
-      this.discount = this.discount + 5;
-    },
-  },
-  watch: {
-    discount(newValue, oldValue) {
-      this.oldDiscount = oldValue;
-    },
-  },
+  { immediate: true
+  }
+);
+
+const updateDiscount = () => {
+  discount.value = discount.value + 5;
 };
+
+const increasePrice = () => {
+  pizza.price = pizza.price + 5;
+};
+
+watch(
+  () => pizza.price,
+  (newValue) => {
+    newPrice.value = newValue - (newValue * discount.value) / 100;
+  }
+);
 </script>
 
 <style scoped>
@@ -39,13 +54,27 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   margin: 0;
 }
+.campaign-wrapper {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   display: inline-block;
-  background: rgb(235, 50, 50);
   border-radius: 10px;
   font-size: 14px;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
+  margin-inline-end: 10px;
+}
+
+.increase-btn {
+  background: rgb(34, 100, 241);
+}
+
+.decrease-btn {
+  background: rgb(241, 34, 34);
 }
 </style>

@@ -1,11 +1,11 @@
 import { mount } from "@vue/test-utils";
-import Exercise from "@/components/Exercise1-10.vue";
+import Exercise from "@/components/Exercise5-06.vue";
 import { describe, it, expect, vi } from "vitest";
 
 // Suppress window.alert errors
 vi.spyOn(window, "alert").mockReturnValue();
 
-describe("Exercise1-10.vue", () => {
+describe("Exercise5-06.vue", () => {
   const wrapper = mount(Exercise);
 
   it("anonymous loop outputs correctly", () => {

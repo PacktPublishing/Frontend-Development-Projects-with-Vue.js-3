@@ -1,7 +1,7 @@
 <template>
-  <UserInput />
+  <BlogGallery />
 </template>
 
 <script setup>
-import UserInput from "./components/UserInput.vue";
+import BlogGallery from "./components/BlogGallery.vue";
 </script>
