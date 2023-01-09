@@ -10,7 +10,7 @@ describe("Exercise2-05.vue", () => {
     expect(blockquote.exists()).toBe(false);
   });
   it("async api fetches", async () => {
-    await wrapper.vm.getApi();
+    await wrapper.vm.fetchAdvice();
     expect(wrapper.vm.quote).toContain(wrapper.vm.axiosResponse.slip.advice);
   });
 });
