@@ -3,13 +3,11 @@
     <router-link :to="{ name: 'list' }">List</router-link> |
     <router-link :to="{ name: 'editor' }">Editor</router-link>
     <router-view v-slot="{ Component }">
-      <transition>
-        <component
-          :is="Component"
-          :list="messages"
-          @list:update="addMessage"
-        />
-      </transition>
+      <component
+        :is="Component"
+        :list="messages"
+        @list:update="addMessage"
+      />
     </router-view>
   </div>
 </template>
@@ -19,17 +17,13 @@ import { useRoute } from "vue-router";
 import { reactive } from "vue";
 
 const route = useRoute();
-const messages = reactive(route.meta.messages || []);
 const props = defineProps({
-  list: {
-    type: Array,
-    default: () => [],
-  },
   currentLayout: {
     type: Object,
     default: () => DefaultLayout,
   },
 });
+const messages = reactive(route.meta.messages || []);
 
 const emits = defineEmits(["update:currentLayout"]);
 emits('update:currentLayout', DefaultLayout);
