@@ -1,21 +1,24 @@
 <template>
   <div>
-    <p>{{ content }}</p>
-    <router-view />
+    <p>{{content}}</p>
+    <router-view/>
   </div>
 </template>
-<script>
-import MessageLayout from "../layouts/messageLayout.vue";
+<script setup>
+import MessageLayout from '../layouts/messageLayout.vue';
 
-export default {
-  props: {
-    content: {
-      type: String,
-      default: "",
-    },
+const props = defineProps({
+  content: {
+    type: String,
+    default: ''
   },
-  created() {
-    this.$emit("update:layout", MessageLayout);
-  },
-};
+  currentLayout: {
+    type: Object,
+    default: () => MessageLayout
+  }
+});
+
+const emits = defineEmits(['update:currentLayout']);
+
+emits('update:currentLayout', MessageLayout);
 </script>

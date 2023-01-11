@@ -1,10 +1,15 @@
 <template>
+  <button @click="show = !show">Toggle</button>
   <transition name="fade-in">
-    <h1>{{ msg }}</h1>
+    <h1 v-show="show">{{ msg }}</h1>
   </transition>
 </template>
 <script setup>
-const msg = "I should be fade in"
+import { ref } from 'vue'
+
+const show = ref(false);
+const msg = "I should be fade in";
+
 </script>
 <style>
 .fade-in-enter-from, .fade-in-leave-to {
@@ -12,6 +17,6 @@ const msg = "I should be fade in"
 }
 
 .fade-in-enter-active, .fade-in-leave-active {
-  transition: opacity 3s easein;
+  transition: opacity 3s ease-in;
 }
 </style>

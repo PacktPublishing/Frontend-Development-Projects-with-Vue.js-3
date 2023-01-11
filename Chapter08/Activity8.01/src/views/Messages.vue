@@ -1,23 +1,42 @@
 <template>
   <div>
-    <router-link :to="{ name: 'list', params: { list }}">List</router-link> |
-    <router-link :to="{ name: 'editor', params: { list }}">Editor</router-link>
-    <transition name="fade" enter-active-class="zoom-in">
-      <router-view :list.sync="list"/>
-    </transition>
+    <router-link :to="{ name: 'list' }">List</router-link> |
+    <router-link :to="{ name: 'editor' }">Editor</router-link>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" enter-active-class="zoom-in">
+        <component
+          :is="Component"
+          :list="messages"
+          @list:update="addMessage"
+        />
+      </transition>
+    </router-view>
   </div>
 </template>
-<script>
-// import DefaultLayout from '../layouts/default';
+<script setup>
+import DefaultLayout from '../layouts/default.vue';
+import { reactive } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
 
-export default {
-  props: {
-    list: Array
+const props = defineProps({
+  list: {
+    type: Array,
+    default: () => [],
   },
-  created() {
-    // this.$emit('update:layout', DefaultLayout);
-  }
-}
+  currentLayout: {
+    type: Object,
+    default: () => DefaultLayout,
+  },
+});
+
+const emits = defineEmits(["update:currentLayout"]);
+emits('update:currentLayout', DefaultLayout);
+
+const messages = reactive(route.meta.messages || []);
+const addMessage = (message) => {
+  messages.push(message);
+};
 </script>
 <style>
 .zoom-in {
