@@ -1,21 +1,40 @@
 <template>
   <div>
-    <router-link :to="{ name: 'list', params: { list }}">List</router-link> |
-    <router-link :to="{ name: 'editor', params: { list }}">Editor</router-link>
-    <router-view :list.sync="list"/>
+    <router-link :to="{ name: 'list' }">List</router-link> |
+    <router-link :to="{ name: 'editor' }">Editor</router-link>
+    <router-view v-slot="{ Component }">
+      <transition>
+        <component
+          :is="Component"
+          :list="messages"
+          @list:update="addMessage"
+        />
+      </transition>
+    </router-view>
   </div>
 </template>
-<script>
+<script setup>
 import DefaultLayout from '../layouts/default.vue';
+import { useRoute } from "vue-router";
+import { reactive } from "vue";
 
-export default {
-  props: {
-    list: Array,
-    currentLayout: Object,
+const route = useRoute();
+const messages = reactive(route.meta.messages || []);
+const props = defineProps({
+  list: {
+    type: Array,
+    default: () => [],
   },
-  emits: ['update:currentLayout'],
-  created() {
-    this.$emit('update:currentLayout', DefaultLayout);
-  }
-}
+  currentLayout: {
+    type: Object,
+    default: () => DefaultLayout,
+  },
+});
+
+const emits = defineEmits(["update:currentLayout"]);
+emits('update:currentLayout', DefaultLayout);
+
+const addMessage = (message) => {
+  messages.push(message);
+};
 </script>

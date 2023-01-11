@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Messages from '../views/Messages.vue';
-const messages = []
+const messages = ['hello']
 
 export const routes = [
   {
     path: '/',
     name: 'messages',
     component: Messages,
-    props: {
-      list: messages
+    beforeEnter(to, from, next) {
+      to.meta.messages = messages;
+      next();
     },
     children: [{
       path: 'list',
