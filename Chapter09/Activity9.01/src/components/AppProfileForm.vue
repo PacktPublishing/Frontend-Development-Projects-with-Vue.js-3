@@ -63,6 +63,16 @@
       />
     </div>
 
+    <div class="w-1/2 flex md:flex-row mt-12">
+      <button
+        class="flex md:w-1/2 justify-center"
+        type="submit"
+        @click="submitForm()"
+      >
+        Submit
+      </button>
+    </div>
+
 
   </section>
 </template>
