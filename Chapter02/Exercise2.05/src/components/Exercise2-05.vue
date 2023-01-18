@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Async fetch</h1>
 
-    <button @click="getApi()">
+    <button @click="fetchAdvice()">
       {{ loading ? "Loading..." : "Learn something profound" }}
     </button>
 
@@ -28,14 +28,18 @@ export default {
     },
   },
   methods: {
-    async getApi() {
+    async fetchAdvice() {
       this.loading = true;
-      return axios.get("https://api.adviceslip.com/advice").then((response) => {
+      try {
+        const response = await axios.get("https://api.adviceslip.com/advice");
         this.axiosResponse = response.data;
+      } catch (error) {
+        console.log(error);
+      } finally {
         setTimeout(() => {
           this.loading = false;
         }, 4000);
-      });
+      }
     },
   },
 };

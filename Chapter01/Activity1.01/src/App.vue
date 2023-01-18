@@ -18,7 +18,7 @@
       </li>
     </ul>
     <br />
-    <button class="button--delete" @click="deleteItem()">Delete all</button>
+    <button class="button--delete" @click="deleteAll()">Delete all</button>
   </div>
 </template>
 
@@ -41,9 +41,14 @@ export default {
       this.$refs.input.focus();
     },
     deleteItem(i) {
-      this.shoppingList = i
-        ? this.shoppingList.filter((item, x) => x !== i)
-        : [];
+      if (i < 0 || i > this.shoppingList.length) return;
+
+      this.shoppingList = this.shoppingList.filter(
+        (item, index) => index !== i
+      );
+    },
+    deleteAll() {
+      this.shoppingList = [];
     },
   },
 };
