@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import Default from './layouts/default.vue'
 import { shallowRef } from 'vue'
 

@@ -1,4 +1,4 @@
-# Exercise7.01
+# Example01
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -28,8 +28,8 @@ npm run dev
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run test:unit
+npm run lint
 ```

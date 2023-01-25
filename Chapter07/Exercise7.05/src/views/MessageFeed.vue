@@ -3,7 +3,7 @@
     <h2> Message Feed </h2>
     <div v-for="(m, i) in messages" :key="i" >
       <RouterLink :to="`/message/${i}`">
-        {{ m }}
+        {{ m.content }}
       </RouterLink>
     </div>
 </div>
