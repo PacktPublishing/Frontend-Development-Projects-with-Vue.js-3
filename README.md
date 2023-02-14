@@ -1,4 +1,4 @@
-# Front-End Development Projects with Vue.js
+# Front-End Development Projects with Vue.js 3
 [![GitHub issues](https://img.shields.io/github/issues/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/issues)
 [![GitHub forks](https://img.shields.io/github/forks/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/network)
 [![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/stargazers)
