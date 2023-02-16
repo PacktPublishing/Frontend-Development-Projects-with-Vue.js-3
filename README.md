@@ -1,37 +1,72 @@
-# Front-End Development Projects with Vue.js 3
-[![GitHub issues](https://img.shields.io/github/issues/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/issues)
-[![GitHub forks](https://img.shields.io/github/forks/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/network)
-[![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Front-End-Development-Projects-with-Vue.js.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/stargazers)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/pulls)
+# Frontend Development Projects with Vue.js 3
 
-This is the repository for [Front-End Development Projects with Vue.js](https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
+<a href="https://www.packtpub.com/product/frontend-development-projects-with-vuejs-3-second-edition/9781803234991"><img src="https://static.packt-cdn.com/products/9781803234991/cover/smaller" alt="" height="256px" align="right"></a>
 
-## Requirements and Setup
-<a href="https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js"><img src="https://github.com/PacktPublishing/Front-End-Development-Projects-with-Vue.js/blob/master/Front-end%20Development%20Projects%20with%20Vue.js.png" alt="Front-End Development Projects with Vue.js" height="320px" width="250px" align="right" this.target="_blank"></a>
+This is the code repository for [Frontend Development Projects with Vue.js 3](https://www.packtpub.com/product/frontend-development-projects-with-vuejs-3-second-edition/9781803234991), published by Packt.
 
-To get started with the project files, you'll need to:
-* Install [Node.js](https://nodejs.org/en/download/)
-* Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* Install [Yarn](https://classic.yarnpkg.com/en/docs/install)
-* Install [Vue.js CLI](https://cli.vuejs.org/guide/installation.html)
-* Install [Visual Studio Code editor](https://code.visualstudio.com)
+**Learn the fundamentals of building scalable web applications and dynamic user interfaces with Vue.js**
 
+## What is this book about?
 
-## About Front-End Development Projects with Vue.js
-[Front-End Development Projects with Vue.js](https://www.amazon.com/Front-End-Development-Projects-Vue-js-applications-dp-1838984828/dp/1838984828/ref=mt_other?_encoding=UTF8&me=&qid=1611065499&utm_source=github&utm_medium=repository&utm_campaign=9781838984823&utm_term=Vue&utm_content=Front-End%20Development%20Projects%20with%20Vue.js) introduces you to Vue 2 and helps you get started with web application development using this popular framework. You'll master the knowledge and skills needed to become an effective front-end developer and apply them to tackle real-world development challenges.
-
-## What you will learn
-* Set up a development environment and start your first Vue 2 project
+This book covers the following exciting features:
+* Set up a development environment and start your first Vue.js 3 project
 * Modularize a Vue application using component hierarchies
 * Use external JavaScript libraries to create animations
-* Share state between components and use Vuex for state management
-* Work with APIs using Vuex and Axios to fetch remote data
+* Share state between components and use Pinia for state management
+* Work with APIs using Pinia and Axios to fetch remote data
 * Validate functionality with unit testing and end-to-end testing
 * Get to grips with web app deployment
 
-## Related Workshops
-If you've found this repository useful, you might want to check out some of our other workshop titles:
-* [The JavaScript Workshop](https://www.amazon.com/JavaScript-Workshop-Interactive-Approach-Learning-ebook/dp/B0824584WF/ref=sr_1_1?dchild=1&keywords=The%20JavaScript%20Workshop&qid=1611056880&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838641917&utm_term=JavaScript&utm_content=The%20JavaScript%20Workshop)
-* [The PHP Workshop](https://www.amazon.com/PHP-Workshop-Interactive-Approach-Learning-ebook/dp/B07ZKDVTM4/ref=sr_1_1?dchild=1&keywords=The%20PHP%20Workshop&qid=1611064737&s=books&sr=1-1&utm_source=github&utm_medium=repository&utm_campaign=9781838648916&utm_term=PHP&utm_content=The%20PHP%20Workshop)
-* [The React Workshop](https://www.amazon.com/React-Workshop-Interactive-Approach-Learning-ebook/dp/B082VG6JCL/ref=sr_1_1?dchild=1&keywords=The%20React%20Workshop&qid=1611056710&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838645564&utm_term=React&utm_content=The%20React%20Workshop)
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1803234997) today!
 
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+alt="https://www.packtpub.com/" border="5" /></a>
+
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
+
+The code will look like the following:
+```
+export default {
+  data() {
+    return {
+      yourData: "your data"
+    }
+  },
+  computed: {
+    yourComputedProperty() {
+      return `${this.yourData}-computed`;
+    }
+  }
+}
+```
+
+**Following is what you need for this book:**
+This book is designed for Vue.js beginners. Whether this is your first JavaScript framework, or if you're already familiar with React or Angular, this book will get you on the right track. To understand the concepts explained in this book, you must be familiar with HTML, CSS, JavaScript, and Node package management.
+
+With the following software and hardware list you can run all code files present in the book (Chapter 1-13).
+### Software and Hardware List
+| Chapter | Software required | OS required |
+| -------- | ------------------------------------ | ----------------------------------- |
+| 1-13 | Node Package Manager (npm) | Windows, Mac OS X, and Linux (Any) |
+| 1-13 | Yarn Package Manager (yarn) | Windows, Mac OS X, and Linux (Any) |
+| 1-13 | Visual Studio Code (VS Code) IDE | Windows, Mac OS X, and Linux (Any) |
+
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/kefZM).
+
+### Related products
+* ASP.NET Core and Vue.js [[Packt]](https://www.packtpub.com/product/aspnet-core-and-vuejs/9781800206694?utm_source=github&utm_medium=repository&utm_campaign=9781800206694) [[Amazon]](https://www.amazon.com/dp/1800206690)
+
+* Vue.js 3 Cookbook [[Packt]](https://www.packtpub.com/product/vuejs-3-cookbook/9781838826222?utm_source=github&utm_medium=repository&utm_campaign=9781838826222) [[Amazon]](https://www.amazon.com/dp/183882622X)
+
+## Get to Know the Author(s)
+
+**Maya Shavin** is Senior Software Engineer at Microsoft, based in Israel. She holds a B.Sc in Computer Sciences, B.A in Business Management, and an International MBA from University of Bar-Ilan, Israel. She works with JavaScript frontend frameworks such as React, Vue.js, etc. to create scalable and performant front-end solutions at companies such as Cooladata, Cloudinary, and currently Microsoft. She founded and organized the VueJS Israel Meetup Community, helping to create a strong playground for Vue.js lovers. Maya is a published author, international speaker and an open-source library maintainer of frontend and web projects. She can be reached at her blog or on Twitter.
+
+**Raymond Camden** is a Senior Developer Evangelist for Adobe. He works on the Document Services APIs to build powerful (and typically cat-related) PDF demos. He is the author of multiple books on web development and has been actively blogging and presenting for almost twenty years. Raymond can be reached at his blog or on Twitter.
+
+
+## Other books by the authors
+[Front-End Development Projects with Vue.js](https://www.packtpub.com/product/front-end-development-projects-with-vuejs/9781838984823?utm_source=github&utm_medium=repository&utm_campaign=9781838984823)
+
+[jQuery Mobile Web Development Essentials - Third Edition](https://www.packtpub.com/product/jquery-mobile-web-development-essentials-third-edition/9781783555055?utm_source=github&utm_medium=repository&utm_campaign=9781783555055)
