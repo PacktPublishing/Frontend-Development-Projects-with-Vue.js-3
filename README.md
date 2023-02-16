@@ -59,7 +59,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Vue.js 3 Cookbook [[Packt]](https://www.packtpub.com/product/vuejs-3-cookbook/9781838826222?utm_source=github&utm_medium=repository&utm_campaign=9781838826222) [[Amazon]](https://www.amazon.com/dp/183882622X)
 
-## Get to Know the Author(s)
+## Get to Know the Authors
 
 **Maya Shavin** is Senior Software Engineer at Microsoft, based in Israel. She holds a B.Sc in Computer Sciences, B.A in Business Management, and an International MBA from University of Bar-Ilan, Israel. She works with JavaScript frontend frameworks such as React, Vue.js, etc. to create scalable and performant front-end solutions at companies such as Cooladata, Cloudinary, and currently Microsoft. She founded and organized the VueJS Israel Meetup Community, helping to create a strong playground for Vue.js lovers. Maya is a published author, international speaker and an open-source library maintainer of frontend and web projects. She can be reached at her blog or on Twitter.
 
