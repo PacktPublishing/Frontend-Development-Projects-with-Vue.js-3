@@ -1,16 +1,22 @@
 <template>
   <div>
-    <h1 v-if="false" v-once v-text="text" />
-
-    <h2 v-else-if="false" v-html="html" />
-
+    <h1 v-show="true" v-once v-text="text" />
+    <h2 v-show="false" v-html="html" />
     <a
-      v-else
       :href="link.url"
       :target="link.target"
       :tabindex="link.tabindex"
       v-text="link.title"
     />
+    <!-- <h1 v-if="false" v-once v-text="text" />
+    <h2 v-else-if="false" v-html="html" /> -->
+    <!-- <a
+      v-else
+      :href="link.url"
+      :target="link.target"
+      :tabindex="link.tabindex"
+      v-text="link.title"
+    /> -->
   </div>
 </template>
 

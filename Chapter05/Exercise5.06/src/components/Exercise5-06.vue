@@ -60,11 +60,11 @@ onBeforeUpdate(() => {
 });
 
 onUnmounted(() => {
-  alert("destroyed: this component has been destroyed");
+  alert("unmouted: this component has been destroyed");
 });
 
 onBeforeUnmount(() => {
-  alert("beforeDestroy: about to blow up this component");
+  alert("beforeUnmount: about to blow up this component");
 });
 </script>
 

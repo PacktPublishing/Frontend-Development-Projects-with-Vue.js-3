@@ -1,26 +1,28 @@
 <template>
-  <div>
-    <div id="nav">
-      <nav>
-        <RouterLink to="/">Home</RouterLink> |
-        <RouterLink to="/messages">Messages</RouterLink>
-      </nav>
-    </div>
-    <router-view v-slot="{ Component, route }">
-      <component :is="layout">
-        <transition :name="route.meta.transition || transition" :mode="mode">
-          <component :is="Component" />
-        </transition>
-      </component>
+  <component :is="layout">
+    <router-view v-slot="{ Component }">
+      <transition :name="route.meta.transition || transition" :mode="mode">
+        <component
+          :is="Component"
+          :list="messages"
+          @update:currentLayout="(newLayout) => (layout = newLayout)"
+        />
+      </transition>
     </router-view>
-  </div>
+  </component>
 </template>
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import Default from "./layouts/default.vue";
+import { shallowRef } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
 
-const layout = () => import("./layouts/default.vue");
+const layout = shallowRef(Default);
 const transition = "fade";
 const mode = "out-in";
+
+const messages = route.meta.messages;
 </script>
 
 <style>

@@ -10,20 +10,13 @@
     </transition>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      msg: "Welcome to your Vue.js App",
-      show: true,
-    };
-  },
-  methods: {
-    toggle() {
-      this.show = !this.show;
-    },
-  },
-}
+<script setup>
+import { ref } from 'vue'
+
+const show = ref(true);
+const msg = "Welcome to your Vue.js App";
+const toggle = () => show.value = !show.value;
+
 </script>
 <style>
 @keyframes slide {

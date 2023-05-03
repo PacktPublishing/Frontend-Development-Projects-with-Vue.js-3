@@ -6,16 +6,16 @@ export const routes = [
   {
     path: "/",
     name: "messages",
-    component: () => import("../views/Messages.vue"),
-    props: {
-      list: messages,
+    component: () => import("../views/Messages.vue"), 
+    beforeEnter(to, from, next) {
+      to.meta.messages = messages;
+      next();
     },
     children: [
       {
         path: "list",
         name: "list",
         component: () => import("../views/MessageList.vue"),
-        props: true,
       },
       {
         path: "editor",

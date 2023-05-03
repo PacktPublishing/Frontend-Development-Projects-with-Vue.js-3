@@ -4,28 +4,25 @@
     <p>Age: {{age}}</p>
   </div>
 </template>
-<script>
+<script setup>
 import users from '../assets/users.js';
+import { ref } from 'vue';
+import { onBeforeRouteUpdate } from 'vue-router';
 
-export default {
-  data() {
-    return {
-      name: '',
-      age: 0
-    }
-  },
-  beforeRouteEnter(to, from, next) {
-    next(vm => {
-      const user = users[to.params.id - 1];
-      vm.name = user.name;
-      vm.age = user.age;
-    })
-  },
-  beforeRouteUpdate(to, from, next) {
-    const user = users[to.params.id - 1];
-    this.name = user.name;
-    this.age = user.age;
-    next();
-  }
-}
+const props = defineProps(['id'])
+
+const name = ref('')
+const age = ref(0)
+
+const user = users[props.id - 1];
+
+name.value = user.name;
+age.value = user.age;
+
+onBeforeRouteUpdate((to, from, next) => {
+  const user = users[props.id - 1];
+  name.value = user.name;
+  age.value = user.age;
+  next();
+})
 </script>
